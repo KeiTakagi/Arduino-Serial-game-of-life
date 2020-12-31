@@ -7,8 +7,8 @@
 */
 
 #include <limits.h> //CHAR_BITの定義獲得
-#define WT 160      //WIDTH
-#define HT 78       //HEIGHT
+#define WT 160       //WIDTH
+#define HT 72        //HEIGHT
 #define MapSize(val)    (((val) + CHAR_BIT - 1) / CHAR_BIT)
 
 unsigned char area[MapSize(HT * WT)];
@@ -80,7 +80,7 @@ void loop() {
       p = WT * k;
       for (j = 0; j < WT; j++)
         setBit(wk, p + j,  getBit( wk, p + WT + j));
-      }
+    }
   }
 }
 
